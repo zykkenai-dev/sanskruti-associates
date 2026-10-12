@@ -1,0 +1,1 @@
+import type {MetadataRoute} from 'next';import {origin} from '@/content/business';export default function robots():MetadataRoute.Robots{return {rules:{userAgent:'*',disallow:'/'},sitemap:`${origin}/sitemap.xml`}}

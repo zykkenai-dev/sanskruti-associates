@@ -1,0 +1,8 @@
+import type { Metadata } from 'next';
+import { Manrope } from 'next/font/google';
+import {business,origin} from '@/content/business';
+import './globals.css';
+const body=Manrope({subsets:['latin'],display:'swap',variable:'--font-body'});
+export const metadata:Metadata={metadataBase:new URL(origin),title:'Sanskruti Associates | Real Estate Agent in Kharadi, Pune since 2007',description:'East Pune property advisor since 2007. Explore rentals, resale homes, plots, independent houses, commercial spaces and land. A website demo crafted by Zykken.',robots:{index:false,follow:false},alternates:{canonical:'/'},openGraph:{title:'Your next address. Rooted in trust.',description:'Sanskruti Associates · East Pune since 2007 · Demo by Zykken',images:[{url:'/images/hero.webp',width:1800,height:1100}]},icons:{icon:'/favicon.svg'}};
+const schema={'@context':'https://schema.org','@type':'RealEstateAgent',name:business.name,foundingDate:'2007',telephone:[business.tel,'+919922334411'],email:business.email,address:{'@type':'PostalAddress',streetAddress:'Sr No 6/1, Office No 101, Sanskruti Height, Above Wellness Medical',addressLocality:'Kharadi, Pune',addressRegion:'Maharashtra',postalCode:'411014',addressCountry:'IN'},areaServed:['Kharadi','Upper Kharadi','Wadgaon Sheri','Viman Nagar','Kalyani Nagar','Pune East'],sameAs:[business.justdial,business.linkedin]};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" className={body.variable}><body><a className="skip-link" href="#main">Skip to content</a>{children}<script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(schema)}}/></body></html>}

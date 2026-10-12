@@ -1,0 +1,1 @@
+import type {MetadataRoute} from 'next';import {origin} from '@/content/business';import {localities} from '@/content/localities';export default function sitemap():MetadataRoute.Sitemap{return [{url:origin},...localities.map(l=>({url:`${origin}/${l.slug}`}))]}

@@ -1,0 +1,2 @@
+export function Mark(){return <svg viewBox="0 0 56 62" fill="none" aria-hidden="true"><path d="M5 57V26C5 12 16 4 28 2c12 2 23 10 23 24v31H5Z" stroke="currentColor" strokeWidth="1.2"/><path d="M20 47 31 18 42 47M24 37h14M13 22h17M17 23v9c0 8 11 9 11 1v-8M17 38l12 12" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round"/></svg>}
+export default function Logo(){return <a className="logo" href="/" aria-label="Sanskruti Associates home"><Mark/><span>SANSKRUTI<small>ASSOCIATES · EST. 2007</small></span></a>}

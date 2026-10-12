@@ -1,0 +1,103 @@
+{
+  "usage": "Hero images show Kharadi with source attribution. Property and category images remain illustrative, not verified Sanskruti listings.",
+  "assets": [
+    {
+      "filename": "hero.webp",
+      "dimensions": [
+        1920,
+        907
+      ],
+      "bytes": 281706,
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kharadi_Skyline.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Kharadi_Skyline.jpg",
+      "photographer": "Akshit 77",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "notes": "Verified Kharadi view of EON IT Park area and World Trade Center, photographed 9 September 2018. Resized and converted to WebP. Derivatives retain CC BY-SA 4.0. Not a live property listing."
+    },
+    {
+      "filename": "hero-mobile.webp",
+      "dimensions": [
+        1080,
+        510
+      ],
+      "bytes": 101556,
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kharadi_Skyline.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/af/Kharadi_Skyline.jpg",
+      "photographer": "Akshit 77",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "notes": "Verified Kharadi view of EON IT Park area and World Trade Center, photographed 9 September 2018. Resized and converted to WebP. Derivatives retain CC BY-SA 4.0. Not a live property listing."
+    },
+    {
+      "filename": "residential-1.webp",
+      "dimensions": [
+        900,
+        600
+      ],
+      "bytes": 150634,
+      "source_page": "https://unsplash.com/photos/modern-apartment-buildings-with-balconies-and-trees-aYzAXOe7Grk",
+      "image_url": "https://images.unsplash.com/photo-1764996915324-91919cee14d3",
+      "photographer": "Sony (@sonyhayes22), source page description credits chuttersnap",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "notes": "Apartment buildings. Source location says Chennai; illustrative stock, not a verified property."
+    },
+    {
+      "filename": "residential-2.webp",
+      "dimensions": [
+        900,
+        612
+      ],
+      "bytes": 67458,
+      "source_page": null,
+      "image_url": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+      "photographer": null,
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "notes": "Modern living room. Known Unsplash hosted image, photographer not confirmed. Illustrative stock."
+    },
+    {
+      "filename": "residential-3.webp",
+      "dimensions": [
+        900,
+        600
+      ],
+      "bytes": 50450,
+      "source_page": null,
+      "image_url": "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+      "photographer": null,
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "notes": "Contemporary interior dining area. Known Unsplash hosted image, photographer not confirmed. Illustrative stock."
+    },
+    {
+      "filename": "land.webp",
+      "dimensions": [
+        900,
+        600
+      ],
+      "bytes": 175714,
+      "source_page": "https://unsplash.com/photos/green-fields-and-buildings-in-a-rural-landscape-P2Y3_8BWTxM",
+      "image_url": "https://images.unsplash.com/photo-1774695475665-9bb23dff3d42",
+      "photographer": "Zoshua Colah",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "notes": "Kusur near Junnar in Pune district. Illustrative stock, not an available plot."
+    },
+    {
+      "filename": "commercial.webp",
+      "dimensions": [
+        900,
+        1350
+      ],
+      "bytes": 85618,
+      "source_page": "https://unsplash.com/photos/modern-glass-building-illuminated-at-dusk-8YMbLoUWO_A",
+      "image_url": "https://images.unsplash.com/photo-1771964427867-1b734fc7f5a7",
+      "photographer": "Elio Elio",
+      "license": "Unsplash License",
+      "license_url": "https://unsplash.com/license",
+      "notes": "Glass office tower in Geneva. Illustrative stock, not a verified property."
+    }
+  ]
+}

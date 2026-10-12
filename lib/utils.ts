@@ -1,0 +1,11 @@
+import {clsx,type ClassValue} from 'clsx';
+import {twMerge} from 'tailwind-merge';
+export const cn=(...inputs:ClassValue[])=>twMerge(clsx(inputs));
+export const waLink=(text:string,phone='917490907624')=>`https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+export const money=(n:number)=>new Intl.NumberFormat('en-IN',{style:'currency',currency:'INR',maximumFractionDigits:0}).format(n);
+export const priceLabel=(n:number)=>n>=10000000?`₹${(n/10000000).toFixed(1)} Cr`:`₹${(n/100000).toFixed(0)} lakh`;
+export function calculateEmi(principal:number,annualRate:number,years:number){const n=years*12,r=annualRate/1200;const emi=r===0?principal/n:principal*r*(1+r)**n/((1+r)**n-1);return {emi,interest:emi*n-principal,total:emi*n};}
+export function amortization(principal:number,annualRate:number,years:number){const r=annualRate/1200,{emi}=calculateEmi(principal,annualRate,years);let balance=principal;const rows=[];for(let y=1;y<=years;y++){let interest=0,paid=0;for(let m=0;m<12;m++){const i=balance*r,p=Math.min(balance,emi-i);interest+=i;paid+=p;balance=Math.max(0,balance-p);}rows.push({year:y,interest,principal:paid,balance});}return rows;}
+export function visitDate(date:string,hour:number){return new Date(`${date}T${String(hour).padStart(2,'0')}:00:00+05:30`);}
+export const calendarStamp=(date:Date)=>date.toISOString().replace(/[-:]/g,'').replace(/\.\d{3}/,'');
+export function calendarData(date:string,hour:number,property:string){const start=visitDate(date,hour),end=new Date(start.getTime()+3600000),title=`Requested visit: ${property||'Sanskruti Associates'}`,details='Tentative request only. Confirm with Sanskruti Associates on WhatsApp.';const escape=(s:string)=>s.replace(/\\/g,'\\\\').replace(/\n/g,'\\n').replace(/,/g,'\\,').replace(/;/g,'\\;');const ics=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Zykken//Sanskruti Demo//EN','BEGIN:VEVENT',`UID:${calendarStamp(start)}-sanskruti-demo`,`DTSTAMP:${calendarStamp(new Date())}`,`DTSTART:${calendarStamp(start)}`,`DTEND:${calendarStamp(end)}`,`SUMMARY:${escape(title)}`,`DESCRIPTION:${escape(details)}`,'STATUS:TENTATIVE','END:VEVENT','END:VCALENDAR'].join('\r\n');return {ics,url:`https://calendar.google.com/calendar/render?${new URLSearchParams({action:'TEMPLATE',text:title,dates:`${calendarStamp(start)}/${calendarStamp(end)}`,details,ctz:'Asia/Kolkata'})}`};}

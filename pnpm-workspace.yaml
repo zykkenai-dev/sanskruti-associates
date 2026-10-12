@@ -1,0 +1,14 @@
+# pnpm workspace policy — kept Vercel-safe.
+# (Upstream Sites template pinned a custom storeDir, minimumReleaseAge and
+# trustLockfile settings that can break Vercel installs. Those are removed
+# here so `pnpm install --frozen-lockfile` works on Vercel, Render, etc.
+# Local Sites development still works; it just uses the default pnpm store.)
+strictDepBuilds: true
+allowBuilds:
+  esbuild: true
+  fsevents: true
+  sharp: true
+  unrs-resolver: true
+  workerd: true
+overrides:
+  miniflare>sharp: 0.35.4
